@@ -32,20 +32,20 @@ description varchar(100) NOT NULL,
 primary key(id),
 foreign key(user_id) references users(id));
 
-INSERT INTO ads(title,description)VALUES
-('For Sale','tools'),
+INSERT INTO ads(title,user_id, description )VALUES
+('For Sale', 3,'tools'),
 
-('For Rent','three bedroom house sits on two acres'),
+('For Rent', 2,'three bedroom house sits on two acres'),
 
-('Job Postings','junior software developer'),
+('Job Postings', 2,'junior software developer'),
 
-('Freebies','firewood'),
+('Freebies', 4, 'firewood'),
 
-('Real Estate',' 150 acres of ranch land'),
+('Real Estate', 1,' 150 acres of ranch land'),
 
-('Cattle','three Charolais cattle'),
+('Cattle', 5, 'three Charolais cattle'),
 
-('Services','lawn service');
+('Services',1, 'lawn service');
 
 CREATE TABLE categories(
 id INT UNSIGNED NOT NULL auto_increment,
